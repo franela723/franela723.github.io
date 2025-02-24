@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Charm - Repostería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8e8e8; /* Rosa pastel del logo */
+            color: #333;
+        }
+        header {
+            background-color: #e74c7c; /* Rosa más vibrante, inspirado en el logo */
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .logo {
+            width: 100px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-family: 'Trebuchet MS', sans-serif; /* Fuente más estilizada para el nombre */
+        }
+        nav {
+            background-color: #ec6e9b; /* Rosa intermedio, inspirado en el logo */
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #f8e8e8;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .product {
+            margin: 20px 0;
+        }
+        .product img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .product h2 {
+            color: #e74c7c; /* Rosa del logo para los títulos */
+            transition: color 0.3s ease;
+        }
+        .product h2:hover {
+            color: #ec6e9b; /* Rosa más claro para el hover */
+        }
+        .product p {
+            color: #555;
+        }
+        footer {
+            background-color: #e74c7c; /* Rosa vibrante para el footer */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #f8e8e8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="logo" src="logo.jpg" alt="Sweet Charm Logo">
+            <h1>Sweet Charm</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="productos">
+        <h1>Bienvenidos a Sweet Charm</h1>
+        
+        <div class="product">
+            <h2>Mini Brownies</h2>
+            <img src="mini_brownies.jpg" alt="Mini Brownies">
+            <p>Pequeños bocados de chocolate intenso, suaves por dentro y crujientes por fuera. Perfectos para endulzar cualquier momento.</p>
+        </div>
+
+        <div class="product">
+            <h2>Carlota de Limón</h2>
+            <img src="carlota_limon.jpg" alt="Carlota de Limón">
+            <p>Un postre refrescante con capas de crema de limón y galletas, equilibrado entre dulce y cítrico. ¡Irresistible!</p>
+        </div>
+
+        <div class="product">
+            <h2>Gelatina Diabética</h2>
+            <img src="gelatina_diabetica.jpg" alt="Gelatina Diabética">
+            <p>Sabor sin culpa: una gelatina ligera y deliciosa, hecha con amor para quienes cuidan su salud.</p>
+        </div>
+    </div>
+    <footer id="contacto">
+        <p>Contáctanos:</p>
+        <p>Tel: 123-456-7890 | Email: <a href="mailto:info@sweetcharm.com">info@sweetcharm.com</a></p>
+        <p>Síguenos en: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+
+    <script>
+        // JavaScript para desplazamiento suave en el menú
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
